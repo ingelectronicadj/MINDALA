@@ -26,7 +26,7 @@ PImage img, img2, img3;
  ***********************************************************************
  */
 void setup() {
-  size(1500, 800); //Define un tamaño para la interfaz
+  size(1400, 800); //Define un tamaño para la interfaz
   img = loadImage("../imagenes/tux.png");
   img2 = loadImage("../imagenes/rgb.png");
   img3 = loadImage("../imagenes/logo.png");
@@ -42,9 +42,9 @@ void setup() {
  
   // Creamos Sliders
   // sliderVx = new sliderV(ubicacion x, ubicacion y, ancho, largo, color);
-  sliderV1 = new sliderV(925, 100, 90, 255, #FF0000); //125
-  sliderV2 = new sliderV(1025, 100, 90, 255, #03FF00); //225
-  sliderV3 = new sliderV(1125, 100, 90, 255, #009BFF); //325
+  sliderV1 = new sliderV(925, 50, 90, 255, #FF0000); //125
+  sliderV2 = new sliderV(1025, 50, 90, 255, #03FF00); //225
+  sliderV3 = new sliderV(1125, 50, 90, 255, #009BFF); //325
 }
 
 /****** INICIO FUNCIONES ADICIONALES SETUP******/
@@ -111,9 +111,9 @@ class sliderV {
 
 void dibujarImagenes() {
   background(0); //Color de fondo 0=negro
-  image(img, 730, 150);// img ,posicion x, posicion y
-  image(img2, 930, 400);
-  image(img3, 0, 10);
+  image(img, 730, 200);// img ,posicion x, posicion y TUX
+  image(img2, 900, 350); // croma
+  image(img3, 0, 10); //logo
 }
 
 void renderizarSliders() {
@@ -126,7 +126,7 @@ void textos() {
   textSize(20);
   String creditos = "Explora las combinaciones del color antes de entrar al juego, observa el circulo cromático y saca tus conclusiones...";
   fill(255);
-  text(creditos, 600, 450, 300, 400);
+  text(creditos, 650, 340, 300, 400);
 }
 
 float tiempoRefrescoDato = 41.667;//mS
