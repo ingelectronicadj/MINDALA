@@ -10,6 +10,8 @@ import java.util.Map;//para crear diccionarios
 
 /*Variables previstas para graficos interactivos*/
 sliderV sliderV1, sliderV2, sliderV3, sliderV4;
+ControlP5 interfaz;
+Slider2D sliderOnda;
 
 /*Definicion de variables para escribir datos PWM al TIVA*/
 Serial puertoSerial;
@@ -18,7 +20,7 @@ int R,G,B = 0; //Tono rojo
 
 
 /* Tipo de datos para almacenar imágenes .gif, .jpg, .tga, .png */
-PImage img, img2, img3;
+PImage img, img2, img3, img4;
 
 /*
  ***********************************************************************
@@ -27,9 +29,10 @@ PImage img, img2, img3;
  */
 void setup() {
   size(1400, 800); //Define un tamaño para la interfaz
-  img = loadImage("../imagenes/tux.png");
+  img = loadImage("../imagenes/intro.png");
   img2 = loadImage("../imagenes/rgb.png");
-  img3 = loadImage("../imagenes/logo.png");
+  img3 = loadImage("../imagenes/tux.png");
+  //img4 = loadImage("../imagenes/mano.gif");
 
   // Comprueba disponibilidad de puerto serial en la maquina  
   println("Puerto Serial disponible.");
@@ -42,11 +45,27 @@ void setup() {
  
   // Creamos Sliders
   // sliderVx = new sliderV(ubicacion x, ubicacion y, ancho, largo, color);
-  sliderV1 = new sliderV(925, 50, 90, 255, #FF0000); //125
-  sliderV2 = new sliderV(1025, 50, 90, 255, #03FF00); //225
-  sliderV3 = new sliderV(1125, 50, 90, 255, #009BFF); //325
+  sliderV1 = new sliderV(925, 400, 90, 255, #FF0000); //125
+  sliderV2 = new sliderV(1025, 420, 90, 255, #03FF00); //225
+  sliderV3 = new sliderV(1125, 400, 90, 255, #009BFF); //325
+  
+  //Graficamos puntero pantalla azul
+  interfaz = new ControlP5(this);//this es el contexto actual (programa)
+  sliderOnda = interfaz.addSlider2D("Color")
+    .setPosition(700, 240)//x,y
+    .setSize(200, 200)//ancho,largo
+    .setMinMax(0, 0, 500, 100) //Define valores minimos y maximos de amplitud y frecuencia
+    .setValue(150, 50); // Asigna unos valores iniciales para amplitud y frecuencia    
+    smooth();//Dibuja todas las geometrias en el lienzo de la interfaz grafica
 }
 
+void dibujarImagenes() {
+  background(0); //Color de fondo 0=negro
+  image(img, 40, 10);
+  image(img3, 730, 300);// img ,posicion x, posicion y TUX
+  image(img2, 900, 10); // croma
+  //image(img4, 1100, 300); // croma
+}
 /****** INICIO FUNCIONES ADICIONALES SETUP******/
 /* Funcion para incrustar imagenes y dibujar sliders*/
 /* Esta función es un bucle que dibuja en el lienzo, por eso se llama draw.*/
@@ -55,7 +74,6 @@ void draw() {
   dibujarImagenes();
   renderizarSliders();  
   rxtxSerial();
-  textos();
 }
 
 /* Clase Slider */
@@ -109,12 +127,7 @@ class sliderV {
   }
 }
 
-void dibujarImagenes() {
-  background(0); //Color de fondo 0=negro
-  image(img, 730, 200);// img ,posicion x, posicion y TUX
-  image(img2, 900, 350); // croma
-  image(img3, 0, 10); //logo
-}
+
 
 void renderizarSliders() {
   sliderV1.render();//Renderiza slider
@@ -122,12 +135,6 @@ void renderizarSliders() {
   sliderV3.render();
 }
 
-void textos() {
-  textSize(20);
-  String creditos = "Explora las combinaciones del color antes de entrar al juego, observa el circulo cromático y saca tus conclusiones...";
-  fill(255);
-  text(creditos, 650, 340, 300, 400);
-}
 
 float tiempoRefrescoDato = 41.667;//mS
 int FPS = 24;//tiempoFPS=1/fps;

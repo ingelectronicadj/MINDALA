@@ -3,9 +3,14 @@
  *              LIBRERIAS y CONSTANTES
  ***********************************************************************
  */
- int tiempo = 1000;  //milisegundos
+ int tiempo = 500;  //milisegundos
  int transicion = 20;  //milisegundos
  int brillo; //Variable auxiliar para condicionales
+ //tapete
+ int pulsador[6] = {33,34,35,36,37,38};
+ int bit0,bit1,bit2,bit3 = LOW;
+ int bit4,bit5,bit6,bit7 = LOW;
+
 
 /****Pines Lectura RGBW****/
 int pinR = 23;
@@ -19,9 +24,15 @@ int pinB = 25;
  */
 void setup() {
   Serial.begin(9600);
+  configPulsadores();
   configurarSalidasPWM();
 }
 
+void configPulsadores() {
+  for (int i=0; i<6;i++){
+    pinMode(pulsador[i], INPUT);
+  }
+}
 
 void configurarSalidasPWM() {
   pinMode(pinR, OUTPUT); // rojo
@@ -116,13 +127,45 @@ void intensidadBrilloCMY(const byte ledPin,const byte ledPin2){
      //delay(1000); // Sostiene el color 1s
 }
 
+void bloqueGenerador() {
+   bit0 = digitalRead(pulsador[0]);
+   bit1 = digitalRead(pulsador[1]);
+   bit2 = digitalRead(pulsador[2]);
+   bit3 = digitalRead(pulsador[3]);
+   bit4 = digitalRead(pulsador[4]);
+   bit5 = digitalRead(pulsador[5]);
+
+   unsigned int vari=(bit0<<5) | (bit1<<4) | (bit2<<3) | (bit3<<2) | (bit4<<1) | bit5;
+   Serial.println(vari);
+   delay(250);
+
+   switch (vari) {
+         // SERIE 1
+       case 0b010000: titileoRGB(pinR); break;
+       case 0b100000: titileoRGB(pinG); break;
+       case 0b001000: titileoRGB(pinB); break;
+       case 0b000100: titileoCMY(pinG,pinB); break;
+       case 0b100010: titileoRGB(pinR); break;
+       case 0b110100: titileoRGB(pinR); break;
+       case 0b110110: titileoRGB(pinR); break;
+       case 0b110010: titileoRGB(pinR); break;
+       case 0b010100: titileoRGB(pinR); break;
+       case 0b010110: titileoRGB(pinR); break;
+       default:
+     // if nothing else matches, do the default
+     // default is optional
+   break;
+ }
+}
+
 /*
  ***********************************************************************
  *              LOOP BUCLE PRINCIPAL
  ***********************************************************************
  */
 void loop() {
-  leeSerialRGBW2PC(4,10);//# Canales, # veces que se repite
+  //leeSerialRGBW2PC(4,10);//# Canales, # veces que se repite
   //blink();
   //rutinaBrillos();
+  bloqueGenerador();
 }
