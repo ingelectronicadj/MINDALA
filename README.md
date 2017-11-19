@@ -1,14 +1,19 @@
 ## NOSOTROS
 
-### Orígenes  
+### Orígenes   
 
-La Estrategia Digital Mindala parte del interés por diseñar e implementar experiencias multisensoriales que potencien el juego libre y la creación a través del performance 
+Bienvenidos a Mindala: Aprender haciendo Amigos.
 
-La Estrategia Digital de Cultura y Primera Infancia (EDCPI), es un proyecto del Ministerio de Cultura, creado en asocio con el Centro Ático de la Pontificia Universidad Javeriana para brindar a los niños colombianos de 0 a 6 años la posibilidad de crecer explorando actividades y contenidos digitales, relacionado con las expresiones artísticas, el patrimonio cultural y la lectura.
+La Estrategia Digital Mindala: Aprender haciendo amigos, es un proyecto desarrollado en la Hackathon PUJ 2017, creado  a partir de los intereses e indagaciones en torno a las posibilidades que proporcionan la tecnología, la pedagógía infantil y el arte a través del performance, para el diseño e implementación de experiencias multisensoriales que brinden a los niños y niñas de 7 a 10 años la oportunidad de explorar, aprender y crear a través de sus sentidos.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### ¿Qué le aporta el proyecto de primera infancia a la ciudad?  
+
+### ¿Los eventos de IDARTES para primera infancia tienen algún costo?  
+
+### ¿Dónde y cómo pueden participar los niños de las actividades del proyecto de Arte en primera infancia?  
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
