@@ -162,12 +162,12 @@ void bloqueGenerador() {
        case 0b000011: titileoWhite(pinR,pinG,pinB); break;
        case 0b000110: titileoWhite(pinR,pinG,pinB); break;
        case 0b001100: titileoWhite(pinR,pinG,pinB); break;
-       case 0b011000: titileoWhite(pinR,pinG,pinB); break;
-       case 0b110000: titileoWhite(pinR,pinG,pinB); break;
+       case 0b011000: titileoCMY(pinB,pinG); break;
+       case 0b110000: titileoCMY(pinR,pinB); break;
        case 0b100001: titileoWhite(pinR,pinG,pinB); break;
        case 0b100010: titileoWhite(pinR,pinG,pinB); break;
        case 0b100100: titileoWhite(pinR,pinG,pinB); break;
-       case 0b101000: titileoWhite(pinR,pinG,pinB); break;
+       case 0b101000: titileoCMY(pinR,pinG); break;
        case 0b010100: titileoWhite(pinR,pinG,pinB); break;
        case 0b010010: titileoWhite(pinR,pinG,pinB); break;
        case 0b010001: titileoWhite(pinR,pinG,pinB); break;
