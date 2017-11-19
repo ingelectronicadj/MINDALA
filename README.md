@@ -8,7 +8,12 @@ La Estrategia Digital Mindala: Aprender haciendo amigos, es un proyecto desarrol
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+### ¿Qué le aporta el proyecto de primera infancia a la ciudad?  
+
+### ¿Los eventos de IDARTES para primera infancia tienen algún costo?  
+
+### ¿Dónde y cómo pueden participar los niños de las actividades del proyecto de Arte en primera infancia?  
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
