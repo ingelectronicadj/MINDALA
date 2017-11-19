@@ -3,7 +3,7 @@
  *              LIBRERIAS y CONSTANTES
  ***********************************************************************
  */
- int tiempo = 500;  //milisegundos
+ int tiempo = 50;  //milisegundos
  int transicion = 20;  //milisegundos
  int brillo; //Variable auxiliar para condicionales
  //tapete
@@ -98,6 +98,17 @@ void titileoCMY(const byte ledPin,const byte ledPin2) {
     delay(transicion);
 }
 
+void titileoWhite(const byte ledPin,const byte ledPin2,const byte ledPin3) {
+    digitalWrite(ledPin, HIGH);
+    digitalWrite(ledPin2, HIGH);
+    digitalWrite(ledPin3, HIGH);
+    delay(tiempo);
+    digitalWrite(ledPin, LOW);
+    digitalWrite(ledPin2, LOW);
+    digitalWrite(ledPin3, LOW);
+    delay(transicion);
+}
+
 void rutinaBrillos(){
   intensidadBrilloRGB(pinR);
   intensidadBrilloRGB(pinG);
@@ -127,6 +138,7 @@ void intensidadBrilloCMY(const byte ledPin,const byte ledPin2){
      //delay(1000); // Sostiene el color 1s
 }
 
+
 void bloqueGenerador() {
    bit0 = digitalRead(pulsador[0]);
    bit1 = digitalRead(pulsador[1]);
@@ -140,17 +152,28 @@ void bloqueGenerador() {
    delay(250);
 
    switch (vari) {
-         // SERIE 1
-       case 0b010000: titileoRGB(pinR); break;
-       case 0b100000: titileoRGB(pinG); break;
-       case 0b001000: titileoRGB(pinB); break;
+         // SERIE 1 titileoRGB / intensidadBrilloRGB
+       case 0b010000: titileoRGB(pinB); break;
+       case 0b100000: titileoRGB(pinR); break;
+       case 0b001000: titileoRGB(pinG); break;
        case 0b000100: titileoCMY(pinG,pinB); break;
-       case 0b100010: titileoRGB(pinR); break;
-       case 0b110100: titileoRGB(pinR); break;
-       case 0b110110: titileoRGB(pinR); break;
-       case 0b110010: titileoRGB(pinR); break;
-       case 0b010100: titileoRGB(pinR); break;
-       case 0b010110: titileoRGB(pinR); break;
+       case 0b000010: titileoCMY(pinR,pinB); break;
+       case 0b000001: titileoCMY(pinR,pinG); break;
+       case 0b000011: titileoWhite(pinR,pinG,pinB); break;
+       case 0b000110: titileoWhite(pinR,pinG,pinB); break;
+       case 0b001100: titileoWhite(pinR,pinG,pinB); break;
+       case 0b011000: titileoWhite(pinR,pinG,pinB); break;
+       case 0b110000: titileoWhite(pinR,pinG,pinB); break;
+       case 0b100001: titileoWhite(pinR,pinG,pinB); break;
+       case 0b100010: titileoWhite(pinR,pinG,pinB); break;
+       case 0b100100: titileoWhite(pinR,pinG,pinB); break;
+       case 0b101000: titileoWhite(pinR,pinG,pinB); break;
+       case 0b010100: titileoWhite(pinR,pinG,pinB); break;
+       case 0b010010: titileoWhite(pinR,pinG,pinB); break;
+       case 0b010001: titileoWhite(pinR,pinG,pinB); break;
+       case 0b001010: titileoWhite(pinR,pinG,pinB); break;
+       case 0b001001: titileoWhite(pinR,pinG,pinB); break;
+       case 0b000101: titileoWhite(pinR,pinG,pinB); break;
        default:
      // if nothing else matches, do the default
      // default is optional
