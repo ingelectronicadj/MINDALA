@@ -2,7 +2,9 @@
 
 ### Orígenes   
 
-La Estrategia Digital Mindala: Aprender haciendo amigos, es un proyecto desarrollado en la Hackathon PUJ 2017, creado  a partir de los intereses e indagaciones en torno a las posibilidades que proporciona la tecnología para el diseño e implementación de experiencias multisensoriales que brinden a los niños y niñas de 7 a 10 años de crecer explorando actividades y contenidos digitales, relacionado con las expresiones artísticas
+Bienvenidos a Mindala: Aprender haciendo Amigos.
+
+La Estrategia Digital Mindala: Aprender haciendo amigos, es un proyecto desarrollado en la Hackathon PUJ 2017, creado  a partir de los intereses e indagaciones en torno a las posibilidades que proporcionan la tecnología, la pedagógía infantil y el arte a través del performance, para el diseño e implementación de experiencias multisensoriales que brinden a los niños y niñas de 7 a 10 años la oportunidad de explorar, aprender y crear a través de sus sentidos.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
