@@ -1,10 +1,8 @@
 ## NOSOTROS
 
-### Orígenes  
+### Orígenes   
 
-La Estrategia Digital Mindala parte del interés por diseñar e implementar experiencias multisensoriales que potencien el juego libre y la creación a través del performance 
-
-La Estrategia Digital de Cultura y Primera Infancia (EDCPI), es un proyecto del Ministerio de Cultura, creado en asocio con el Centro Ático de la Pontificia Universidad Javeriana para brindar a los niños colombianos de 0 a 6 años la posibilidad de crecer explorando actividades y contenidos digitales, relacionado con las expresiones artísticas, el patrimonio cultural y la lectura.
+La Estrategia Digital Mindala: Aprender haciendo amigos, es un proyecto desarrollado en la Hackathon PUJ 2017, creado  a partir de los intereses e indagaciones en torno a las posibilidades que proporciona la tecnología para el diseño e implementación de experiencias multisensoriales que brinden a los niños y niñas de 7 a 10 años de crecer explorando actividades y contenidos digitales, relacionado con las expresiones artísticas
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
