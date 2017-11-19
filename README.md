@@ -1,8 +1,10 @@
 ## NOSOTROS
 
-### Mindala: "Aprender haciendo amigos"  
+### Orígenes  
 
-You can use the [editor on GitHub](https://github.com/ingelectronicadj/MINDALA/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+La Estrategia Digital Mindala parte del interés por diseñar e implementar experiencias multisensoriales que potencien el juego libre y la creación a través del performance 
+
+La Estrategia Digital de Cultura y Primera Infancia (EDCPI), es un proyecto del Ministerio de Cultura, creado en asocio con el Centro Ático de la Pontificia Universidad Javeriana para brindar a los niños colombianos de 0 a 6 años la posibilidad de crecer explorando actividades y contenidos digitales, relacionado con las expresiones artísticas, el patrimonio cultural y la lectura.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
